@@ -25,9 +25,9 @@ import taglib
               help="Move wma files into this folder after done")
 def main(target, trash):
     for t in target:
-        if os.path.isdir(target):
+        if os.path.isdir(t):
             raise click.UsageError(
-                "Can't use folder {} as a target".format(target))
+                "Can't use folder {} as a target".format(t))
 
     for t in target:
         convert_target(t, trash)
